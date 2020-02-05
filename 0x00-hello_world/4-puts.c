@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- *this comentary to the checker
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

@@ -11,6 +11,7 @@ int main(void)
 	for (; num < 123; num++)
 	{
 		putchar(num);
+		putchar("\n");
 	}
 	return (0);
 }

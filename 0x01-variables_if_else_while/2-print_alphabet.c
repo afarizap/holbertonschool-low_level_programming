@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
 	int num = 97;
 
-	for (;num < 123;num++)
+	for (; num < 123; num++)
 	{
 		putchar(num);
 	}
-	return(0);
+	return (0);
 }

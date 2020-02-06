@@ -1,9 +1,14 @@
 #include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int num = 97;
 
-	for (num; num < 123; num++)
+	for (; num < 123; num++)
 	{
 		putchar(num);
 	}

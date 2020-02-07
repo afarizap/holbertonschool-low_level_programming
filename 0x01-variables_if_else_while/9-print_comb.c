@@ -1,0 +1,23 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int b;
+
+	while (b < 10)
+	{
+		putchar(b + '0');
+		if (b < 9)
+		{
+		putchar(44);
+		putchar(32);
+		}
+		b++;
+	}
+	putchar('\n');
+	return (0);
+}

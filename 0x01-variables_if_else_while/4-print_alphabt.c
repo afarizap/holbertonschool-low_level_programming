@@ -10,13 +10,13 @@ int main(void)
 
 	for (b = 97; b < 123; b++)
 	{
-		if (b != 101 || b != 113)
+		if (b != 101 && b != 113)
 		{
-			b++;
+			putchar(b);
 		}
 		else
 		{
-			putchar(b);
+			b++;
 		}
 	}
 	putchar('\n');

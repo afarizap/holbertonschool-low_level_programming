@@ -8,16 +8,9 @@ int main(void)
 {
 	int b;
 
-	for (b = 97; b < 123; b++)
+	for (b = 48; b < 58; b++)
 	{
-		if (b != 101 && b != 113)
-		{
-			b++;
-		}
-		else
-		{
-			putchar(b);
-		}
+		putchar(b);
 	}
 	putchar('\n');
 	return (0);

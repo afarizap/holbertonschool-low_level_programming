@@ -8,9 +8,9 @@
  */
 int _isalpha(int c)
 {
-	if (c < 123)
+	if (c > 96)
 	{
-		if (c > 96)
+		if (c < 123)
 		{
 			return (1);
 		}

@@ -1,6 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
-
+/**
+ * print_alphabet_x10 - print x10 alphabet
+ *
+ */
 void print_alphabet_x10(void)
 {
 	char c;

@@ -1,6 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
-int _islower(int c) /* _islower for lowercase return 1 */
+/**
+ * _islower - return 1 if lowercase
+ * @c: The character to print
+ *
+ * Return: Always 0.
+ */
+int _islower(int c)
 {
 	if (c < 123)
 	{

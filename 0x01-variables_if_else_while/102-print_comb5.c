@@ -17,7 +17,7 @@ int main(void)
 			for (c = a; c <= '9'; c++)
 				for (d = b; d <= '9'; d++)
 				{
-					if (!(b == d && a == c))
+					if (!((b == d) && (a == c)))
 					{
 						putchar(a);
 						putchar(b);

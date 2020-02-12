@@ -3,23 +3,25 @@
 
 /**
  * main - check the code for Holberton School students.
+ * abs- function to get absolute value from numbers.
+ *@c: variable 1
  *
- * Return: Always 0.
+ * * Return: Always 0.
  */
 
-int _islower(int c)
+int _abs(int c)
 {
-	if (c > '0')
+	if (c > 0)
 	{
-	return (1);
+		return (c);
 	}
-	else if (c > 96)
+	else if (c == 0)
 	{
-		return (-1);
+		return (c);
 	}
 	else
 	{
-		return (0);
+		return (-c);
 	}
 	return (0);
 }

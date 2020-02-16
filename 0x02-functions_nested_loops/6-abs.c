@@ -2,11 +2,10 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- * abs- function to get absolute value from numbers.
+ *_abs - function to get value from numbers.
  *@c: variable 1
  *
- * * Return: Always 0.
+ * Return: Always 0.
  */
 
 int _abs(int c)

@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * _strlen - check the code for Holberton School students.
+ * _strlen - measure the lenght of a loop.
  *
- * @s : Variable
+ * @s : string pointer array
+ *Return: gives c value
  */
 int _strlen(char *s)
 {

@@ -19,14 +19,19 @@ void puts_half(char *str)
 	{
 		w = x / 2;
 	}
-	else
+	if (x % 2 == 1)
 	{
 		w = (x - 1) / 2;
 	}
 	while (str[w] != '\0')
 	{
-		w++;
+		if (w != 0)
+		{
 		_putchar(str[w]);
+		w++;
+		}
+		else
+			w++;
 	}
 	_putchar('\n');
 }

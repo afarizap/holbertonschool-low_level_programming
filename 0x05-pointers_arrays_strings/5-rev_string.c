@@ -17,7 +17,7 @@ void rev_string(char *s)
 	{
 	c++;
 	}
-	while (r <= c)
+	while (r < c)
 	{
 		c--;
 		e = s[r];

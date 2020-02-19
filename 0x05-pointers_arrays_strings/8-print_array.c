@@ -10,13 +10,15 @@ void print_array(int *a, int n)
 {
 	int x = 0;
 
-	while (a[x] < a[n])
+	while (x < n)
 	{
-		printf("%d", a[x]);
+		printf("%d, ", a[x]);
 		x++;
-		if (a[x] < a[n])
-		putchar(',');
-		putchar(' ');
+		if (x < n)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 }

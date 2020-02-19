@@ -2,17 +2,20 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * *_strcpy - copy a string from one pointer to another var.
+ *@dest: where string is copied from src
+ *@src: where the string  have to be coppied
+ * Return: dest(cpied string)
  */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
 {
-	char s1[98];
-	char *p;
+	int n = 0;
 
-	p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-	printf("%s", s1);
-	printf("%s", p);
-	return (0);
+	while (src[n] != '\0')
+	{
+		dest[n] = src[n];
+		n++;
+	}
+	dest[n] = '\0';
+return (dest);
 }

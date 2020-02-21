@@ -16,7 +16,7 @@ char *cap_string(char *x)
 	{
 		for (g = 0; g < 13; g++)
 		{
-			if (z[g] == x[c])
+			if (z[g] == x[c] || x[c] == x[0])
 			{
 				if (x[c + 1] > 'a' && x[c + 1] < 'z')
 				{

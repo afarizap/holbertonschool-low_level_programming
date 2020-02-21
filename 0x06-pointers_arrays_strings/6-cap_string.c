@@ -23,7 +23,7 @@ char *cap_string(char *x)
 					x[c + 1] -= 32;
 				}
 			}
-			if (x[c] == x[0])
+			if (z[g] == x[c] && x[c] == x[0])
 			{
 				x[c] -= 32;
 			}

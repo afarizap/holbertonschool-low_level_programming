@@ -19,6 +19,7 @@ char *rot13(char *x)
 			if (x[c] == l[m])
 			{
 				x[c] = n[m];
+				break;
 			}
 		}
 		c++;

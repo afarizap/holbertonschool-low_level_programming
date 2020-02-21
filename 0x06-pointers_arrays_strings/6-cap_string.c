@@ -2,28 +2,32 @@
 #include <stdio.h>
 /**
  * *cap_string - make lowercase to upercase on a string
- * @x: string to make uppercase
+ * @s: string to make uppercase
  * Return: variable x
  */
-char *cap_string(char *x)
+char *cap_string(char *s)
 {
-	int c;
-	int g;
-	char z[] = {'}', '{', ')', '(', '"', '?', '!',
-		    '.', ';', ',', ' ', '\t', '\n', '\0'};
+        int ns;
+        int ne;
+        char e[] = {'}', '{', ')', '(', '"', '?', '!', '.', ';', ',', ' ', '\t', '\n'};
 
-	for (c = 0; x[c] != '\0'; c++)
-	{
-		for (g = 0; g < 13; g++)
-		{
-			if (z[g] == x[c - 1])
-			{
-				if (x[c] >= 97 && x[c] <= 122)
-				{
-					x[c] -= 32;
-				}
-			}
-		}
-	}
-	return (x);
+        if (s[0] >= 'a' && s[0] <= 'z')
+        {
+                *s -= 32;
+        }
+        for (ns = 0; s[ns] ; ns++)
+        {
+                for (ne = 0; e[ne] ; ne++)
+                {
+                        if (s[ns] == e[ne])
+                        {
+                                if (s[ns + 1] >= 97 && s[ns + 1] <= 122)
+                                {
+                                        *(s + ns + 1) -= 32;
+                                        break;
+                                }
+                        }
+                }
+        }
+        return (s);
 }

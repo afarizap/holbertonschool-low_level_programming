@@ -27,6 +27,10 @@ char *cap_string(char *x)
 					x[c] = ' ';
 				}
 			}
+			if (x[c] == x[0] && x[c] > 'a' && x[c] < 'z')
+			{
+				x[c] -= 32;
+			}
 		}
 	}
 	return (x);

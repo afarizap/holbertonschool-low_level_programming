@@ -16,12 +16,16 @@ char *cap_string(char *x)
 	{
 		for (g = 0; g < 13; g++)
 		{
-			if (z[g] == x[c] || x[c] == x[0])
+			if (z[g] == x[c])
 			{
 				if (x[c + 1] > 'a' && x[c + 1] < 'z')
 				{
 					x[c + 1] -= 32;
 				}
+			}
+			if (x[c] == x[0])
+			{
+				x[c] -= 32;
 			}
 		}
 	}

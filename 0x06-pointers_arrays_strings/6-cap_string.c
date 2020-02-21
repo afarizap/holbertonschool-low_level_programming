@@ -21,7 +21,6 @@ char *cap_string(char *x)
 				if (x[c - 1] >= 97 && x[c - 1] <= 122)
 				{
 					x[c] -= 32;
-					break;
 				}
 			}
 		}

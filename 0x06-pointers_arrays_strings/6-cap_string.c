@@ -16,9 +16,9 @@ char *cap_string(char *x)
 	{
 		for (g = 0; g < 13; g++)
 		{
-			if (z[g] == x[c])
+			if (z[g] == x[c - 1])
 			{
-				if (x[c - 1] >= 97 && x[c - 1] <= 122)
+				if (x[c] >= 97 && x[c] <= 122)
 				{
 					x[c] -= 32;
 				}

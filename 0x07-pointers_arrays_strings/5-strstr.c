@@ -3,8 +3,8 @@
 
 /**
  * *_strstr - check the code for Holberton School students.
- *@haystack:
- *@needle:
+ *@haystack: string to prit
+ *@needle: string to get
  * Return: Always 0.
  */
 char *_strstr(char *haystack, char *needle)
@@ -26,6 +26,6 @@ char *_strstr(char *haystack, char *needle)
 				c = 0;
 		}
 	}
-	haystack = &haystack[a - c];
+	haystack = (haystack + a - c);
 	return (haystack);
 }

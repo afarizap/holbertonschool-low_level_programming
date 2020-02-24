@@ -2,7 +2,11 @@
 #include "holberton.h"
 
 /**
- *
+ * *_memset - put a variable in the memory
+ * @s: string
+ * @b: times memory should be filled
+ * @n: leng string
+ * Return: return fixed string
  */
 char *_memset(char *s, char b, unsigned int n)
 {

@@ -2,9 +2,10 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * *_strpbrk - string from match with accept.
+ *@s: string
+ *@accept: input to match
+ * Return: string from match.
  */
 char *_strpbrk(char *s, char *accept)
 {

@@ -20,9 +20,6 @@ char *_strchr(char *s, char c)
 		s = &s[count];
 		return (s);
 	}
-	if (s[count] == '\0')
-	{
-		s = '\0';
-	return (0);
-	}
+	else
+		return (0);
 }

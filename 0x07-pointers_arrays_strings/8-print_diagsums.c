@@ -25,7 +25,7 @@ void print_diagsums(int *a, int size)
 	for (count2 = 0; count2 < size; count2++)
 	{
 		resta += a[count2];
-		if (count < (size - 1))
+		if (count < (size + 1))
 			a = (a - size);
 	}
 	printf("%d", resta);

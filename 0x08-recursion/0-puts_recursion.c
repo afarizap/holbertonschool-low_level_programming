@@ -2,9 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _puts_recursion - prints string recursively.
+ *@s: string
  */
 void _puts_recursion(char *s)
 {
@@ -14,4 +13,6 @@ void _puts_recursion(char *s)
 		_puts_recursion(s);
 	if (*s == '\0')
 		_putchar('\n');
+	else
+		return (0);
 }

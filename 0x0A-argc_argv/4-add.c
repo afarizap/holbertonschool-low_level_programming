@@ -17,17 +17,21 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	for (a = 1; a < argc; a++)
+	{
 		for (b = 0; argv[a][b] != '\0'; b++)
+		{
 			if (argv[a][b] >= '0' && argv[a][b] <= '9')
 			{
-				x = atoi(argv[a]);
-				c += x;
 			}
 			else
 			{
 				puts("Error");
 				return (1);
 			}
+		}
+		x = atoi(argv[a]);
+		c += x;
+	}
 	printf("%i\n", c);
 	return (0);
 }

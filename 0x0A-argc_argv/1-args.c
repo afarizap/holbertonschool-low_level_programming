@@ -7,7 +7,7 @@
  *Return: return ok
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int counter;
 

@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * *_strdup - returns copy of a string.
+ * @str: - string
  * Return: Always 0.
  */
 char *_strdup(char *str)
@@ -15,13 +15,15 @@ char *_strdup(char *str)
 
 	if (str == '\0')
 		return ('\0');
+	if (str == NULL)
+		return (NULL);
 
 	for (; str[a] != '\0'; a++)
 	{
 	}
 
 	s = malloc(sizeof(char) * a);
-	for (;b <= a; b++)
+	for (; b <= a; b++)
 		s[b] = str[b];
 	return (s);
 }

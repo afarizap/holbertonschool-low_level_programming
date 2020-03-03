@@ -21,6 +21,5 @@ char *create_array(unsigned int size, __attribute__((unused))char c)
 		s[i] = c;
 	if (s == NULL)
 		return (NULL);
-	else
-		return (s);
+	return (s);
 }

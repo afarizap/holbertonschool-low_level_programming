@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ *main - print all the arguments with argv and argc
+ *@argc: number of arguments in the argv string
+ *@argv: string containing arguments
+ *Return: return ok
+ */
+
+int main(int argc, char *argv[])
+{
+	int a, b, c;
+
+	if (argc == 3)
+	{
+		a = atoi(argv[1]);
+                b = atoi(argv[2]);
+                c = a * b;
+		printf("%i\n", c);
+	}
+	else
+		puts("Error");
+	return (0);
+}

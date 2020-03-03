@@ -19,7 +19,7 @@ char *create_array(unsigned int size, __attribute__((unused))char c)
 	s = malloc(sizeof(char) * size);
 	for (; i < size; i++)
 		s[i] = c;
-	if (s == '\0')
+	if (s == NULL)
 		return (NULL);
 	else
 		return (s);

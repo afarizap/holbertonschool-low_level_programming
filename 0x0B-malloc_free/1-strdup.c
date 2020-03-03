@@ -1,0 +1,27 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+char *_strdup(char *str)
+{
+	int a = 0;
+	char *s;
+	int b = 0;
+
+	if (str == '\0')
+		return ('\0');
+
+	for (; str[a] != '\0'; a++)
+	{
+	}
+
+	s = malloc(sizeof(char) * a);
+	for (;b <= a; b++)
+		s[b] = str[b];
+	return (s);
+}

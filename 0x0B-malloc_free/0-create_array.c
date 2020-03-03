@@ -9,7 +9,7 @@
  * Return: string s
  */
 
-char *create_array(unsigned int size, __attribute__((unused))char c)
+char *create_array(unsigned int size, char c)
 {
 	unsigned int i = 0;
 	char *s;

@@ -6,6 +6,7 @@
  * *create_array - creates an array of a size and filled with char c
  * @size: size of the string
  * @c: character in the string
+ * Return: string s
  */
 
 char *create_array(unsigned int size, __attribute__((unused))char c)
@@ -18,5 +19,8 @@ char *create_array(unsigned int size, __attribute__((unused))char c)
 	s = malloc(sizeof(char) * size);
 	for (; i < size; i++)
 		s[i] = c;
-	return (s);
+	if (s == '\0')
+		return (NULL);
+	else
+		return (s);
 }

@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -42,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 		s[a2] = s1[a2];
 	for (; b2 < b; b2++)
 		s[a2 + b2] = s2[b2];
-	s[a2 + b2] = '\0';
+	s[a2 + b2 + 1] = '\0';
 	if (s == NULL)
 		return (NULL);
 

@@ -16,12 +16,16 @@ char *str_concat(char *s1, char *s2)
 	int a2 = 0;
 	int b2 = 0;
 	int ab = 0;
+	char *z = "";
 
 	if (s1 == NULL)
-		return (NULL);
+	{
+		s1 = z;
+	}
 	if (s2 == NULL)
-		return (NULL);
-
+	{
+		s1 = z;
+	}
 	for (; s1[a] != '\0'; a++)
 	{
 	}

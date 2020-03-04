@@ -3,10 +3,9 @@
 #include <stdlib.h>
 
 /**
- * **alloc_grid - returns a pointer to a 2 dimensional array of integers
- * @width: width of the grid
+ * free_grid - free memory
  * @height: height of the grid
- * Return: Null if negative or fail, else grid.
+ * @grid: 2d grid
  */
 void free_grid(int **grid, int height)
 {

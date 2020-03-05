@@ -4,18 +4,17 @@
 #include <string.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * _calloc - malloc with 0 assigned.
+ * @nmemb: number of memory in bytes
+ * @size: the size of the memory
+ * Return: string or null if failure.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *s;
 	unsigned int x = 0;
 
-	s = malloc(nmemb * size);
+	s = malloc(nmemb * size + 1);
 	if (s == NULL)
 	{
 		free(s);

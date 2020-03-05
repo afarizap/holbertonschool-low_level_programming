@@ -1,0 +1,27 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	char *s;
+	unsigned int x = 0;
+
+	s = malloc(sizeof(char) * size);
+	if (s == NULL)
+	{
+		free(s);
+		return (NULL);
+	}
+	for (; x < size; x++)
+			s[x] = 0;
+	return (s);
+}

@@ -1,8 +1,5 @@
-#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
 /**
  * _calloc - malloc with 0 assigned.
  * @nmemb: number of memory in bytes
@@ -16,13 +13,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if ((nmemb || size) == 0)
 		return (NULL);
-	s = malloc(nmemb * size + 1);
+	s = malloc(nmemb * size);
 	if (s == NULL)
 	{
 		free(s);
 		return (NULL);
 	}
 	for (; x < size; x++)
-			s[x] = 0;
-	return (s);
+		s[x] = 0;
+       	return (s);
 }

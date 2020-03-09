@@ -1,0 +1,13 @@
+#ifndef PERRI
+#define PERRI
+/**
+ *struct dog - perro
+ */
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+}
+
+#endif

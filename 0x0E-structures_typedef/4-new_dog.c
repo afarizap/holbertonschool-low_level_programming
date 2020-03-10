@@ -13,21 +13,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *new_dog;
 	char *s1, *s2;
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
-		return (NULL);
 	s1 = _strdup(name);
 	if (s1 == NULL)
 		return (NULL);
 	s2 = _strdup(owner);
 	if (s2 == NULL)
+	{
+		free(s1);
 		return (NULL);
+	}
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
+	{
+		free(s1);
+		free(s2);
+		return (NULL);
+	}
 	new_dog->name = name;
 	new_dog->age = age;
 	new_dog->owner = owner;
 	return (new_dog);
 }
-#include <stdlib.h>
 /**
  * *_strdup - returns copy of a string.
  * @str: - string

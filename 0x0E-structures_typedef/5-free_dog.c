@@ -2,9 +2,8 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * free_dog - free memory of dog.
+ * @d: pointer.
  */
 void free_dog(dog_t *d)
 {

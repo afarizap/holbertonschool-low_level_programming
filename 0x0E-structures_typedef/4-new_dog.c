@@ -29,9 +29,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(s2);
 		return (NULL);
 	}
-	new_dog->name = name;
+	new_dog->name = s1;
 	new_dog->age = age;
-	new_dog->owner = owner;
+	new_dog->owner = s2;
 	return (new_dog);
 }
 /**
@@ -53,6 +53,5 @@ char *_strdup(char *str)
 		return (NULL);
 	for (; b < a; b++)
 		s[b] = str[b];
-	s[b] = '\n';
 	return (s);
 }

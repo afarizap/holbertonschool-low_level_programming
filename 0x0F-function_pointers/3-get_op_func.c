@@ -28,7 +28,7 @@ int (*get_op_func(char *s))(int, int)
 			printf("Error\n");
 			exit(99);
 		}
-		if ((ops[i].op == "/" || ops[i].op == "%") && num2 == 0)
+		if ((ops[i].op == "/" || ops[i].op == "%") && num2 == 48)
 		{
 			printf("Error\n");
 			exit(100);

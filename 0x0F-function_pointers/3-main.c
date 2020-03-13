@@ -16,15 +16,15 @@ int main(int argc, char *argv[])
 	int num2 = 0;
 	int res = 0;
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
 	if (argv[2][1])
 	{
 		printf("Error\n");
 		exit(100);
+	}
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
 	}
 	s = argv[2];
 	num1 = atoi(argv[1]);

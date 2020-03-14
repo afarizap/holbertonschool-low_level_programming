@@ -17,8 +17,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (t = 0; t < n; t++)
 	{
 		p = va_arg(palabras, char *);
-		if (palabras == NULL)
-			puts("(nil)");
+		if (p == NULL)
+			printf("(nil)");
 		else
 			printf("%s", p);
 		if (t != (n - 1) && separator != NULL)

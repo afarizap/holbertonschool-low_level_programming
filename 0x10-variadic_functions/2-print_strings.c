@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_strings - prints strings, followed by a new line.
+ * @separator: string to be printed between the strings.
+ * @n: number of strings passed to the function.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -15,17 +15,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (!separator)
 		return;
-	va_start (palabras, n);
+	va_start(palabras, n);
 	for (t = 0; t < n; t++)
 	{
-		p = va_arg (palabras, char *);
+		p = va_arg(palabras, char *);
 		if (palabras == NULL)
-			printf ("%p", p);
+			printf("(nil)");
 		else
-			printf ("%s", p);
-		if (t != (n - 1))
+			printf("%s", p);
+		if (t != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 	printf("\n");
-	va_end (palabras);
+	va_end(palabras);
 }

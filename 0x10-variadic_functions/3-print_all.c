@@ -1,37 +1,59 @@
 #include "variadic_functions.h"
-
+/**
+ *caracter - function that prints character of list
+ *@lista: name of list
+ */
 void caracter(va_list lista)
 {
 	printf("%c", va_arg(lista, int));
 }
+/**
+ *entero - function that prints entero of list
+ *@lista: name of list
+ */
 void entero(va_list lista)
 {
 	printf("%d", va_arg(lista, int));
 }
+/**
+ *flotante - function that prints float of list
+ *@lista: name of list
+ */
 void flotante(va_list lista)
 {
 	printf("%f", va_arg(lista, double));
 }
+/**
+ *charpuntero - function that prints charpointer of list
+ *@lista: name of list
+ */
 void charpuntero(va_list lista)
 {
-	printf("%s", va_arg(lista, char *));
+	char *punterin;
+
+	punterin = va_arg(lista, char *);
+	if (!punterin)
+		punterin = "(nil)";
+	printf("%s", punterin);
+
 }
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_all - print some words :v
+ * @format: function pointer.
+ * struct estructura  - asd
  */
 void print_all(const char * const format, ...)
 {
-	int i, j;
+	char *comita = "";
+	unsigned int i, j;
 	va_list list;
-	struct_t estructura[] = {
-		{"c", caracter},
-		{"i", entero},
-		{"f", flotante},
-		{"s", charpuntero},
-		{NULL, NULL}
+	sct_t estructura[] = {
+		{'c', caracter},
+		{'i', entero},
+		{'f', flotante},
+		{'s', charpuntero}
 	};
+
 	va_start(list, format);
 	i = 0;
 	while (format[i] != '\0')
@@ -39,11 +61,11 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while ((estructura[j].c))
 		{
-			if ((*estructura[j].c) == format[i])
+			if (estructura[j].c == format[i])
 			{
-				(*estructura[j].p)(list);
-				if (format[i + 1] != '\0')
-					printf(", ");
+				printf("%s", comita);
+				estructura[j].p(list);
+				comita = ", ";
 			}
 			j++;
 		}

@@ -10,9 +10,9 @@
  */
 typedef struct estructura
 {
-	char *c;
+	char c;
 	void (*p)(va_list list);
-} struct_t;
+} sct_t;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);

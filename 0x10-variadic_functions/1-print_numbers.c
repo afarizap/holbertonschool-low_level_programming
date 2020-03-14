@@ -3,24 +3,22 @@
 #include <stdarg.h>
 #include <ctype.h>
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_numbers - prints numbers, followed by a new line.
+ * @separator: , and space
+ * @n: number of listed files
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list numeros;
 	unsigned int i;
 
-	if (separator == NULL)
-		return;
-	va_start (numeros, n);
+	va_start(numeros, n);
 	for (i = 0; i < n; i++)
 	{
 		printf("%i", va_arg(numeros, int));
-		if (i != (n - 1))
+		if (i != (n - 1) && separator != NULL)
 			printf("%s", separator);
 	}
 	printf("\n");
-	va_end (numeros);
+	va_end(numeros);
 }

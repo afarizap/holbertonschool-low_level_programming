@@ -1,18 +1,16 @@
 section     .text
-	global      main	;must be declared for linker (ld)
+	global      main
+main:
+	    mov     edx,len
+	    mov     ecx,msg
+	    mov     ebx,1
+	    mov     eax,4
+	    int     0x80
 
-main:				;tell linker entry point
-
-	    mov     edx,len	;message length
-	    mov     ecx,msg	;message to write
-	    mov     ebx,1	;file descriptor (stdout)
-	    mov     eax,4	;system call number (sys_write)
-	    int     0x80	;call kernel
-
-	    mov     eax,1	;system call number (sys_exit)
-	    int     0x80	;call kernel
+	    mov     eax,1
+	    int     0x80
 
 	section     .data
 
-	msg     db  'Hello, Holberton',0xa	;our dear string
+	msg     db  'Hello, Holberton',0xa
 	len     equ $ - msg

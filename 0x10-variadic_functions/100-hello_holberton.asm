@@ -1,6 +1,6 @@
-section     .text
+section 	    .text
 	global      main
-main:
+main
 	    mov     edx,len
 	    mov     ecx,msg
 	    mov     ebx,1

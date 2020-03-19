@@ -5,14 +5,20 @@
 
 /**
  * print_list -  prints all the elements of a list_t list
- * @h: head
+ * @h: head of constant list_t being counted
  * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	size_t tamaño = NULL;
+	int contador = 0;
+	const list_t *temporal;
 
-	while (h)
-		h = h.tamaño, size++;
-	return (size);
+	temporal = h;
+	while (temporal)
+	{
+		printf("[%d] %s\n", (*temporal).len, (*temporal).str);
+		temporal = (*temporal).next;
+		contador++;
+	}
+	return (contador);
 }

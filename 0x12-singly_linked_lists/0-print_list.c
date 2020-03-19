@@ -14,9 +14,12 @@ size_t print_list(const list_t *h)
 	const list_t *temporal;
 
 	temporal = h;
-	while (temporal)
+	while (temporal != NULL)
 	{
-		printf("[%d] %s\n", (*temporal).len, (*temporal).str);
+		if ((*temporal).str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", (*temporal).len, (*temporal).str);
 		temporal = (*temporal).next;
 		contador++;
 	}

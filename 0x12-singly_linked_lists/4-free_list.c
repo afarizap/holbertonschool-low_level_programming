@@ -9,15 +9,15 @@
  */
 void free_list(list_t *head)
 {
-	list_t *temporal;
+	list_t *tengame;
 
-	temporal = head;
+	tengame = head;
 	while (head)
 	{
-		temporal = head;
+		tengame = head;
 		head = (*head).next;
-		free((*temporal).str);
-		free(temporal);
+		free((*tengame).str);
+		free(tengame);
 	}
 	free(head);
 }

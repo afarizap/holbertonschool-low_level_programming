@@ -1,18 +1,19 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_listint - prints all the elements of a listint_t list.
+ * @h: pointer
+ * Return: int n.
  */
 size_t print_listint(const listint_t *h)
 {
 	unsigned int n;
+
 	while (h)
 	{
 		printf("%i\n", (*h).n);
 		h = (*h).next;
 		n++;
 	}
-	return(n);
+	return (n);
 }

@@ -3,17 +3,18 @@
 /**
  * add_nodeint_end - adds a new node at the end of a listint_t list
  * @head: double pointer with head address
- * @n
+ * @n: number to be printed
  * Return: nuevonodo.
  */
-listint_t *add_nodeint_end(listint_t **head, const int *n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *nuevonodo;
 	listint_t *temporal;
 
 	nuevonodo = malloc(sizeof(listint_t));
-
-	nuevonodo->n = *n;
+	if (!nuevonodo)
+		return (NULL);
+	nuevonodo->n = n;
 	(*nuevonodo).next = NULL;
 	if (!*head)
 		*head = nuevonodo;

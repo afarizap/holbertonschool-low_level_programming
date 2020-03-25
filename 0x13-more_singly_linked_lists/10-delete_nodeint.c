@@ -23,6 +23,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	while (n + 1 < index)
 	{
 		aux = aux->next;
+		if (!aux)
+			return (-1);
 		n++;
 	}
 	aux2 = aux->next;

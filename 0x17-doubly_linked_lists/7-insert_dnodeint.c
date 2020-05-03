@@ -25,7 +25,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	for (; idx > 1; idx--)
 	{
 		if (!(*aux).next)
-			break;
+		{
+			idx--;
+			if (idx > 1)
+			{
+				free(new);
+				return (NULL);
+			}
+			else
+				break;
+		}
 		aux = (*aux).next;
 		if (!aux)
 			return (NULL);

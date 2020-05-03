@@ -9,12 +9,13 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	size_t i = 0;
-	dlistint_t *get;
+	dlistint_t *get = head;
 
-	get = malloc(sizeof(dlistint_t));
-	for (; i < index; i++)
-		head = (*head).next;
-	(*get).n = (*head).n;
+	if (!get)
+		return (NULL);
+
+	for (; 0 < index; index--)
+		get = (*get).next;
+
 	return (get);
 }

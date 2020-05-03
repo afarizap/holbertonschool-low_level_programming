@@ -11,11 +11,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *get = head;
 
-	if (!get)
-		return (NULL);
-
 	for (; 0 < index; index--)
 		get = (*get).next;
-
+	if (!get)
+		return (NULL);
 	return (get);
 }

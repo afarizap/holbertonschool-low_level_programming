@@ -7,10 +7,24 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	while (head && (*head).next)
+	if ((*head).prev != NULL)
 	{
-		head = (*head).next;
-		free((*head).prev);
+		while ((*head).prev != NULL)
+		{
+			head = (*head).prev;
+			free((*head).next);
+		}
+		free(head);
 	}
-	free(head);
+	else if ((*head).next != NULL)
+	{
+		while ((*head).next != NULL)
+		{
+			head = (*head).next;
+			free((*head).prev);
+		}
+		free(head);
+	}
+	else
+		free(head);
 }

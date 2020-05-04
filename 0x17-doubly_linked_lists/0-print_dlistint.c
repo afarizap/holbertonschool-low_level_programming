@@ -11,7 +11,7 @@ size_t print_dlistint(const dlistint_t *h)
 	size_t i = 0;
 	const dlistint_t *aux = h;
 
-	for(; aux; i++)
+	for (; aux; i++)
 	{
 		printf("%d\n", (*aux).n);
 		aux = (*aux).next;

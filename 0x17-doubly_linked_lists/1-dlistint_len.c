@@ -7,9 +7,10 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	unsigned int i = 0;
+	size_t i = 0;
+	const dlistint_t *aux = h;
 
-	for (; h; i++)
-		h = (*h).next;
+	for (; aux; i++)
+		aux = (*aux).next;
 	return (i);
 }

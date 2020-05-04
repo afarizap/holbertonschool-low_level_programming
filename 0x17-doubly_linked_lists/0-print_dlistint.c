@@ -10,11 +10,33 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	size_t i = 0;
 
-	while (h)
+	if ((*h).prev != NULL)
 	{
+		while ((*h).prev)
+		{
+			printf("%d\n", (*h).n);
+			h = (*h).prev;
+			i++;
+		}
 		printf("%d\n", (*h).n);
-		h = (*h).next;
-		i++;
+	}
+	else if ((*h).next != NULL)
+	{
+		while ((*h).next)
+		{
+			printf("%d\n", (*h).n);
+			h = (*h).next;
+			i++;
+		}
+		printf("%d\n", (*h).n);
+	}
+	else
+	{
+		if ((*h).n)
+		{
+			printf("%d\n", (*h).n);
+			i++;
+		}
 	}
 	return (i);
 }

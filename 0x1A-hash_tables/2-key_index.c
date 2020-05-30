@@ -16,6 +16,6 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 	{
 		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
-       	hash %= size;
-	return hash;
+	hash %= size;
+	return (hash);
 }

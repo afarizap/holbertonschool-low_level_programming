@@ -1,11 +1,18 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 1 to stderr
  */
+
 int main(void)
 {
-fprintf( stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
-return (0);
+	const char *a;
+
+	a = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(2, a, strlen(a));
+	return (1);
 }

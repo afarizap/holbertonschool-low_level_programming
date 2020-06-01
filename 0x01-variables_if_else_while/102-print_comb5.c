@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char a = '0', aa = '0', b = '0', bb = '0';
+	int a = '0', aa = '0', b = '0', bb = '0';
 
 	for (; a <= '9'; a++)
 		for (aa = '0'; aa <= '9'; aa++)

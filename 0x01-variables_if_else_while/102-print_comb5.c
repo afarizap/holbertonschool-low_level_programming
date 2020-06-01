@@ -7,30 +7,24 @@
 
 int main(void)
 {
-	int a;
-	int b;
-	int c;
-	int d;
+	char a = '0', aa = '0', b = '0', bb = '0';
 
-	for (a = '0'; a <= '9'; a++)
-		for (b = '0'; b <= '9'; b++)
-			for (c = a; c <= '9'; c++)
-				for (d = b; d <= '9'; d++)
+	for (; a <= '9'; a++)
+		for (aa = '0'; aa <= '9'; aa++)
+			for (b = a; b <= '9'; b++)
+				for (bb = aa; bb <= '9'; bb++)
 				{
-					if (!((b == d) && (a == c)))
-					{
-						putchar(a);
-						putchar(b);
-						putchar(' ');
-						putchar(c);
-						putchar(d);
-
-						if (!(a == '9' && b == '8'))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					if (a > b)
+						continue;
+					if (aa == bb && a >= b)
+						continue;
+					putchar(a);
+					putchar(aa);
+					putchar(' ');
+					putchar(b);
+					putchar(bb);
+					if (a != '9' || aa != '8')
+						putchar(',');
 				}
 	putchar('\n');
 	return (0);

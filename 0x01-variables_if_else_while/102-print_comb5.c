@@ -12,11 +12,13 @@ int main(void)
 	for (; a <= '9'; a++)
 		for (aa = '0'; aa <= '9'; aa++)
 			for (b = a; b <= '9'; b++)
-				for (bb = aa; bb <= '9'; bb++)
+				for (bb = '0'; bb <= '9'; bb++)
 				{
 					if (a > b)
 						continue;
-					if (aa == bb && a >= b)
+					if (aa == bb && a == b)
+						continue;
+					if (a >= b && aa >= bb)
 						continue;
 					putchar(a);
 					putchar(aa);
@@ -28,6 +30,8 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+					else
+						break;
 				}
 	putchar('\n');
 	return (0);

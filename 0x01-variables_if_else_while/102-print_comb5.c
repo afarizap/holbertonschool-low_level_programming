@@ -24,7 +24,10 @@ int main(void)
 					putchar(b);
 					putchar(bb);
 					if (a != '9' || aa != '8')
+					{
 						putchar(',');
+						putchar(' ');
+					}
 				}
 	putchar('\n');
 	return (0);

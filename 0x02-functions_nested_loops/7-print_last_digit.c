@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * print_last_digit - function to print last digit of a number.
@@ -12,6 +10,8 @@ int print_last_digit(int c)
 {
 	int lastdigit;
 
+	if (c == INT_MIN)
+		c = 8;
 	lastdigit = abs(c) % 10;
 	_putchar('0' + lastdigit);
 	return (lastdigit);

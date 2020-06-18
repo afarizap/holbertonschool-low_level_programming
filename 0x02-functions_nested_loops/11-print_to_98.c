@@ -6,7 +6,7 @@
  */
 void print_to_98(int n)
 {
-	float y;
+	int y, x, z;
 
 	while (n != 98)
 	{
@@ -18,15 +18,13 @@ void print_to_98(int n)
 			y = n;
 		if (y >= 100)
 		{
-			y /= 100;
-			_putchar((int)y % 10 + '0');
-			y *= 100;
+			x = y / 100;
+			_putchar(x + '0');
 		}
 		if (y >= 10)
 		{
-			y /= 10;
-			_putchar((int)y % 10 + '0');
-			y *= 10;
+			z = y / 10;
+			_putchar(z % 10 + '0');
 		}
 		_putchar((int)y % 10 + '0');
 		_putchar(',');

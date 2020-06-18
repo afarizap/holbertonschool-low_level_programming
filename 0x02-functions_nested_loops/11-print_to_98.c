@@ -4,24 +4,31 @@
  * print_to_98 - prints all natural numbers from n to 98
  * @n: given number
  */
-
 void print_to_98(int n)
 {
-	int x = 0, y = 0;
+	float y;
 
 	while (n != 98)
 	{
-		y = n;
 		if (n < 0)
 			_putchar('-');
-		while (abs(y) > 9)
+		if (n < 0)
+			y = -n;
+		else
+			y = n;
+		if (y >= 100)
 		{
-			for (x = y; abs(x) > 9;)
-				x = abs(x) / 10;
-			_putchar(x + 48);
-			y /= 10;
+			y /= 100;
+			_putchar((int)y % 10 + '0');
+			y *= 100;
 		}
-		_putchar(abs(n) % 10 + '0');
+		if (y >= 10)
+		{
+			y /= 10;
+			_putchar((int)y % 10 + '0');
+			y *= 10;
+		}
+		_putchar((int)y % 10 + '0');
 		_putchar(',');
 		_putchar(' ');
 		if (n < 98)

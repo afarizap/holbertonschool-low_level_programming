@@ -3,29 +3,24 @@
 
 /**
  * *_strstr - check the code for Holberton School students.
- *@haystack: string to prit
- *@needle: string to get
+ * @haystack: string to prit
+ * @needle: string to get
  * Return: Always 0.
  */
 char *_strstr(char *haystack, char *needle)
 {
 	int a;
-	int b;
-	int c;
 
-	for (a = 0; haystack[a] != '\0'; a++)
+	if (!*needle)
+		return (haystack);
+	while (haystack)
 	{
-		for (b = 0; needle[b] != '\0'; b++)
-		{
-			if (haystack[a] == needle[b])
-			{
-				c++;
-				break;
-			}
-			if (needle[b + 1] == '\0')
-				c = 0;
-		}
+		while (haystack[a] == needle[a])
+			a++;
+		if (needle[a] == '\0')
+			return (haystack);
+		a = 0;
+		haystack++;
 	}
-	haystack = (haystack + a - c);
-	return (haystack);
+	return (NULL);
 }

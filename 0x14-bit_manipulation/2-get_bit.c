@@ -7,7 +7,8 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	if (!n || n == '\0')
+		return (-1);
 	n >>= index;
-	n %= 2;
-	return(n);
+	return (n %= 2);
 }

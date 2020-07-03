@@ -1,2 +1,5 @@
-holberton:
-	gcc main.c holberton.c -o holberton
+CC=gcc
+Cflags=-I
+
+holberton: main.c holberton.c
+	$(CC) -o holberton main.c holberton.c

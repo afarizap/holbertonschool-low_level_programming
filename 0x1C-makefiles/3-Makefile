@@ -1,0 +1,18 @@
+CC=gcc
+SRC=main.c holberton.c
+OBJ=${SRC:%.c=%.o}
+NAME=holberton
+RM=rm -f ${OBJ}
+%.o : %.c
+	$(CC) -c -o $@ $<
+all: ${OBJ}
+	${CC} ${SRC} -o ${NAME}
+clean:
+	rm -f *~ ${NAME}
+oclean:
+	rm -f ${OBJ}
+fclean:
+	rm -f *~ ${NAME}
+	rm -f ${OBJ}
+re: all
+	${RM}

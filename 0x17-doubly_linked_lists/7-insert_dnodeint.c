@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -10,29 +13,29 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *aux = *h, *new = malloc(sizeof(dlistint_t));
+	dlistint_t *aux = *h, *a = *h, *new;
+	unsigned int idx_len = 0, i = idx;
 
+	new = malloc(sizeof(dlistint_t));
 	if (!new)
 		return (NULL);
-	(*new).n = n;
-	(*new).next = NULL;
-	(*new).prev = NULL;
+	new->n = n;
+	new->next = NULL;
+	new->prev = NULL;
 
+	if (!*h)
+		*h = new; return (new);
 
-	if (idx == 0)
-		if (!*h)
-			*h = new;
-		else
-			(*new).next = *h, (**h).prev = new, *h = new;
-	else
-	{
-		if (idx > 0)
-			while ((*aux).next)
-				aux = (*aux).next, i--;
-		if ((*aux).next)
-			(*new).next = NULL;
-		(*aux).next = new;
-		(*aux).prev = aux;
-	}
+	while (aux != NULL)
+		idx_len += 1, aux = aux->next;
+	if (idx > idx_len)
+		return (NULL);
+
+	for (;i != 0; i--)
+		a = a->next;
+	new->next = a->next;
+	new->prev = a;
+	a->next = new;
+	new->next->prev = new;
 	return (new);
 }

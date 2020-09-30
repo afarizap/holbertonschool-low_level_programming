@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include "holberton.h"
 
 /**
@@ -6,14 +7,11 @@
  */
 int get_endianness(void)
 {
-	union {
-		short s;
-		char c[sizeof(short)];
-	} un;
-	un.s = 0x0102;
+	int16_t i = 1;
+	int8_t *p = (int8_t *) &i;
 
-		if(un.c[0] == 1 && un.c[1] == 2)
-			return (0);
-		else
-			return (1);
+	if (p[0] == 1)
+		return (1);
+	else
+		return (0);
 }

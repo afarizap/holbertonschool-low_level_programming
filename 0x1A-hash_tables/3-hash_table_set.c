@@ -9,7 +9,19 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int x;
+	hash_node_t *node;
+	unsigned long int idx;
 
-	return 0;
-]
+	if (!key)
+		return (0);
+	idx = key_index((unsigned char *)key, ht->size);
+	node = malloc(sizeof(*node));
+	ht->array[idx] = node;
+
+	node->key = strdup(key);
+	node->value = strdup(value);
+
+	if (node->value == NULL || node->key == NULL)
+		free(node->value), free(node->key); return (0);
+	return (1);
+}

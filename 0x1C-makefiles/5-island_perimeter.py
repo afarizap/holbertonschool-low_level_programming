@@ -7,6 +7,11 @@ def island_perimeter(grid):
     h = 0
     v2 = 0
     v1 = 0
+    if len(grid) = 1:
+        if grid[0][0] is 1:
+            return 4
+        else:
+            return 0
     x = len(grid[0])
     y = [0 for x in range(x)]
     grid.append(y)
